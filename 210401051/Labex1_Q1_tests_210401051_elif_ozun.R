@@ -29,3 +29,12 @@ test_that("Test : maps adl?? data.frame???in ilk s??tunun ad?? 'City' olmal??d??
   testthat::expect_equal(names(maps)[1], "City")
 })
 
+
+#2.8)
+install.packages("fansi")
+library("fansi")
+install.packages("rematch2")
+library("rematch2")
+test_that("Test : maps adl?? data.frame???in 5. s??tunun ad??nda 'Title' kelimesi ge??melidir", {
+  testthat::expect_true(grepl( "Title", colnames(maps)[5], fixed = TRUE))
+})

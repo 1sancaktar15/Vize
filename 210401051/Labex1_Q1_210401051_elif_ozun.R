@@ -21,3 +21,6 @@ idx <- which(maps$Longitude == "W")
 # 1.5)
 maps$Latitude <- gsub("E", "" , maps$Latitude)
 maps$Longitude <- gsub("W", "" , maps$Longitude)
+
+# 1.6)
+maps$Year <- as.numeric(gsub("AD", "" , maps$Year))
