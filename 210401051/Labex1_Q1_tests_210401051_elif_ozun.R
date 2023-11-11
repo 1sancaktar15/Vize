@@ -38,3 +38,8 @@ library("rematch2")
 test_that("Test : maps adl?? data.frame???in 5. s??tunun ad??nda 'Title' kelimesi ge??melidir", {
   testthat::expect_true(grepl( "Title", colnames(maps)[5], fixed = TRUE))
 })
+
+#2.9)
+test_that("Test : Latitude adl?? s??tun numeric de??erlerden olu??mal??d??r", {
+  testthat::expect_true(all(is.numeric(maps$Latitude)))
+})

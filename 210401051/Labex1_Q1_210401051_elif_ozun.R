@@ -19,8 +19,13 @@ maps$Latitude <- as.numeric(gsub("N", "" , maps$Latitude))
 idx <- which(maps$Longitude == "W")
 
 # 1.5)
-maps$Latitude <- gsub("E", "" , maps$Latitude)
-maps$Longitude <- gsub("W", "" , maps$Longitude)
+maps$Latitude <- gsub(" E", "" , maps$Latitude)
+maps$Longitude <- gsub(" W", "" , maps$Longitude)
 
 # 1.6)
 maps$Year <- as.numeric(gsub("AD", "" , maps$Year))
+
+# 1.7)
+maps$Longitude <- as.numeric(maps$Longitude)
+maps$Latitude <- as.numeric(maps$Latitude)
+class(maps$Latitude)
