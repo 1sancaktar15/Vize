@@ -23,3 +23,9 @@ test_that("Test : maps adl?? de??iken Global Workspace???de mevcuttur", {
 test_that("Test : maps nesnesi bir data.frame???dir", {
   testthat::expect_true(is.data.frame(maps))
 })
+
+#2.7)
+test_that("Test : maps adl?? data.frame???in ilk s??tunun ad?? 'City' olmal??d??r", {
+  testthat::expect_equal(names(maps)[1], "City")
+})
+

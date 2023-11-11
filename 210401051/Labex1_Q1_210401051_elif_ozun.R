@@ -17,3 +17,7 @@ maps$Latitude <- as.numeric(gsub("N", "" , maps$Latitude))
 
 # 1.4)
 idx <- which(maps$Longitude == "W")
+
+# 1.5)
+maps$Latitude <- gsub("E", "" , maps$Latitude)
+maps$Longitude <- gsub("W", "" , maps$Longitude)
