@@ -43,3 +43,8 @@ test_that("Test : maps adl?? data.frame???in 5. s??tunun ad??nda 'Title' kelimes
 test_that("Test : Latitude adl?? s??tun numeric de??erlerden olu??mal??d??r", {
   testthat::expect_true(all(is.numeric(maps$Latitude)))
 })
+
+#2.10)
+test_that("Test : Longitude adl?? s??tun numeric de??erlerden olu??mal??d??r", {
+  testthat::expect_true(all(is.numeric(maps$Longitude)))
+})
