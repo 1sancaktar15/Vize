@@ -14,3 +14,6 @@ maps <- read.csv(dosya, header=TRUE, sep=";")
 
 # 1.3)
 maps$Latitude <- as.numeric(gsub("N", "" , maps$Latitude))
+
+# 1.4)
+idx <- which(maps$Longitude == "W")

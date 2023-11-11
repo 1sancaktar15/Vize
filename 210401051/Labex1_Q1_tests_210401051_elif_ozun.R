@@ -18,3 +18,8 @@ test_that("Test : MapsThatChangedOurWorld_StoryMap_Data.csv adl?? dosya aktif di
 test_that("Test : maps adl?? de??iken Global Workspace???de mevcuttur", {
   testthat::expect_true(exists("maps", envir = .GlobalEnv))
 })
+
+#2.6)
+test_that("Test : maps nesnesi bir data.frame???dir", {
+  testthat::expect_true(is.data.frame(maps))
+})
