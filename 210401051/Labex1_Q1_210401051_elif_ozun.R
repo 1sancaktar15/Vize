@@ -12,3 +12,5 @@ download.file(url, destfile = dosya, method = "auto")
 # 1.2)
 maps <- read.csv(dosya, header=TRUE, sep=";")
 
+# 1.3)
+maps$Latitude <- as.numeric(gsub("N", "" , maps$Latitude))
