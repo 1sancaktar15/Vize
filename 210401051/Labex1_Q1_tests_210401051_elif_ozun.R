@@ -48,3 +48,9 @@ test_that("Test : Latitude adl?? s??tun numeric de??erlerden olu??mal??d??r", {
 test_that("Test : Longitude adl?? s??tun numeric de??erlerden olu??mal??d??r", {
   testthat::expect_true(all(is.numeric(maps$Longitude)))
 })
+
+#2.11)
+test_that("Test : Year adl?? s??tun numeric de??erlerden olu??mal??d??r", {
+  testthat::expect_true(all(is.numeric(maps$Year)))
+})
+
