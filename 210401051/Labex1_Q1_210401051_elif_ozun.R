@@ -16,11 +16,11 @@ maps <- read.csv(dosya, header=TRUE, sep=";")
 maps$Latitude <- as.numeric(gsub("N", "" , maps$Latitude))
 
 # 1.4)
-idx <- which(maps$Longitude == "W")
+idx <- grep("W", maps$Longitude)
 
 # 1.5)
-maps$Latitude <- gsub(" E", "" , maps$Latitude)
-maps$Longitude <- gsub(" W", "" , maps$Longitude)
+maps$Longitude <- gsub("E", "" , maps$Longitude)
+maps$Longitude <- gsub("W", "" , maps$Longitude)
 
 # 1.6)
 maps$Year <- as.numeric(gsub("AD", "" , maps$Year))
@@ -34,3 +34,9 @@ hist(maps$Year, breaks = 10, main = "Histogram Of Years", xlab = "Year", col = "
 
 # 1.9)
 maps$Longitude[idx] <- maps$Longitude[idx] * -1
+
+# 1.10)
+finalResult <- maps[c("Longitude", "Latitude", "Year")]
+
+
+
